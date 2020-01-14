@@ -26,10 +26,10 @@
                   :size="170"
                   :width="15"
                   :value="100"
-                  color="white"
+                  color="#ff00e1"
                   indeterminate
                 >
-                  <p class="lightsaber-pink-md"> Coming soon!</p>
+                  <p class="lightsaber-pink-md">Coming soon!</p>
                 </v-progress-circular>
           </v-card>
         </v-col>
