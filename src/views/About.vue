@@ -7,28 +7,34 @@
           <v-card
             color="transparent"
             flat
+            height="10px"
           >
-            <h1>This is an about page</h1>
+            <h1 class="lightsaber-pink">About me</h1>
           </v-card>
-          <v-carousel
-            cycle
-            height="60px"
-            width="100%"
-            :show-arrows="false"
-            hide-delimiters
-            interval="2500"
-          >
-            <v-carousel-item v-for="(item, index) in images" :key="index">
-              <v-row class="fill-height" align="center" justify="center">
-                <!--<v-img
-                class="white--text align-end"
-                height="300px"
-                src='{{ images }}'
-              >
-              </v-img> -->
-              </v-row>
-            </v-carousel-item>
-          </v-carousel>
+
+          <br><br>
+
+          <v-card color='transparent' flat height='350px'>
+            <v-carousel
+              cycle
+              height="100%"
+              width="100%"
+              hide-delimiters
+              interval="2500"
+              show-arrows-on-hover
+            >
+            <v-carousel-item
+              v-for="(item,i) in items"
+              :key="i"
+              :src="item.src"
+              reverse-transition="fade-transition"
+              transition="fade-transition"
+            ></v-carousel-item>
+            </v-carousel>
+            <br>
+            <v-card-text class="lightsaber-pink-md" style="color: white;">I'm a friendly and curious engineer who is always on the move.</v-card-text>
+            <v-card-text class="lightsaber-pink-md" style="color: white;">I love electronics, making stuff, programming and ice hockey!</v-card-text>
+          </v-card>
         </v-col>
       </v-row>
     </v-container>
@@ -39,18 +45,23 @@
 // @ is an alias to /src
 
 export default {
-  name: 'home',
+  name: 'about',
   data: () => ({
-      images: ['Electronics Engineer', 'Telecommunications Engineer', 'Maker', 'Web Developer']
+      images: ['@/assets/hockey.jpg', '@/assets/programming.jpeg'],
+      items: [
+        { src: require('@/assets/programming.jpeg') },
+          { src: require('@/assets/electronics.jpg') },
+          { src: require('@/assets/welding.jpg') },
+          { src: require('@/assets/hockey.jpg') }
+        ]
     }),
 };
 </script>
 
 <style scoped>
 
-  body {
-
-        font-family: 'Roboto', sans-serif;
+  h1 {
+    font-family: 'Montserrat', sans-serif;
   }
   .side-nav {
     color: white;
@@ -71,6 +82,12 @@ export default {
   .lightsaber-pink-sm{
     color: white;
     font-size: 1em;
+    text-shadow: 0 0 5px #ff00dd;
+  }
+
+  .lightsaber-pink-md{
+    color: white;
+    font-size: 1.8em;
     text-shadow: 0 0 5px #ff00dd;
   }
 </style>
