@@ -26,7 +26,6 @@
           <v-carousel
             cycle
             height="60px"
-            width="100%"
             :show-arrows="false"
             hide-delimiters
             interval="2500"
@@ -81,22 +80,6 @@ export default {
     font-size: 3em;
     text-shadow: 0 0 5px #ff00dd;
     font-family: 'Montserrat', sans-serif;
-  }
-
-  .float-animation {
-    animation: float 5s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0% {
-      transform: translatey(0px);
-    }
-    50% {
-      transform: translatey(-20px);
-    }
-    100% {
-      transform: translatey(0px);
-    }
   }
 
 </style>

@@ -101,7 +101,7 @@
       color="transparent"
       absolute
     >
-      <v-col class="text-center">
+      <v-col class="text-center" cols=11>
         <div class="lightsaber-pink-sm">Alfredo Rentería Villanueva &copy; {{ new Date().getFullYear() }}</div>
       </v-col>
     </v-footer>
