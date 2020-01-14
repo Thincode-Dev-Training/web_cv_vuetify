@@ -30,7 +30,7 @@
         <v-divider></v-divider>
 
           <v-list nav>
-            <v-list-item link to="/">
+            <v-list-item link to="/home">
               <v-list-item-icon>
                 <i class="fas fa-home lightsaber-pink"></i>
               </v-list-item-icon>
